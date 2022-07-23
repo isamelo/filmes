@@ -2,7 +2,6 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
-import java.net.URL;
 
 public class GeradorDeFigurinhas {
 
@@ -12,7 +11,6 @@ public class GeradorDeFigurinhas {
         // InputStream inputStream = new FileInputStream(new File("entrada/filmeMaior.jpg"));
         // InputStream inputStream =
         // new URL("https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@.jpg").openStream();
-
 
         BufferedImage imageOriginal = ImageIO.read(inputStream);
 
