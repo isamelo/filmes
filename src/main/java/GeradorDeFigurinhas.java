@@ -6,11 +6,13 @@ import java.net.URL;
 
 public class GeradorDeFigurinhas {
 
-    public void cria () throws Exception {
+    public void cria (InputStream inputStream, String nomeArquivo) throws Exception {
 
         // leitura da imagem
-        //InputStream inputStream = new FileInputStream(new File("entrada/filmeMaior.jpg"));
-        InputStream inputStream = new URL("https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@.jpg").openStream();
+        // InputStream inputStream = new FileInputStream(new File("entrada/filmeMaior.jpg"));
+        // InputStream inputStream =
+        // new URL("https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@.jpg").openStream();
+
 
         BufferedImage imageOriginal = ImageIO.read(inputStream);
 
@@ -39,11 +41,6 @@ public class GeradorDeFigurinhas {
 //        System.out.println("Diretório criado "+fileName);
 
         // escrever a nova imagem em um arquivo
-        ImageIO.write(novaImagem, "png", new File("saida/figurinha.png"));
-    }
-
-    public static void main(String[] args) throws Exception {
-        var gerador = new GeradorDeFigurinhas();
-        gerador.cria();
+        ImageIO.write(novaImagem, "png", new File(nomeArquivo));
     }
 }
