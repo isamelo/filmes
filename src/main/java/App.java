@@ -27,13 +27,16 @@ public class App {
         System.out.println(listaDeFilmes.get(0));
 
         // exibir e manipular os dados
-        for (Map<String, String> filme : listaDeFilmes) {
+        for (int i = 0; i < 10; i++) {
 
-            String urlImagem = filme.get("imagem");
+            Map<String, String> filme = listaDeFilmes.get(i);
+
+            String urlImagem = filme.get("image").replaceAll("(@+)(.*).jpg$","$1.jpg");
+
             String titulo = filme.get("title");
 
             InputStream inputStream = new URL(urlImagem).openStream();
-            String nomeArquivo = titulo + ".png";
+            String nomeArquivo = "saida/" + titulo + ".png";
 
             var gerador = new GeradorDeFigurinhas();
             gerador.cria(inputStream, nomeArquivo);
