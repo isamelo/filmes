@@ -2,9 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class ConectorFilmes {
+public class ConectorFilmes implements ExtratorConteudo{
 
-    List<Conteudo> extraiConteudos(String json) {
+    public List<Conteudo> extraiConteudos(String json) {
 
         // extrair os dados que interessam (título, poster, classificação)
         var parser = new JsonParser();
