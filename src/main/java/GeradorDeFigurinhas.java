@@ -30,7 +30,7 @@ public class GeradorDeFigurinhas {
         graphics.setFont(fonte);
 
         // escrever uma frase na nova imagem
-        graphics.drawString("Top 1", 100, novaAltura - 100);
+        graphics.drawString("Top", 100, novaAltura - 100);
 
 //        // criando o diretorio
 //        String fileName = "C:/Users/Isabe/Documents/Projeto/stickers/saida";
